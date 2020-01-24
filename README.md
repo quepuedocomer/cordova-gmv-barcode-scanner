@@ -1,0 +1,1 @@
+# cordova-gmv-barcode-scanner
