@@ -122,6 +122,10 @@
         <resource-file src="src/android/res/drawable/torch_inactive.xml"
                        target="res/drawable/torch_inactive.xml"/>
 
+        <resource-file src="src/android/res/drawable/close.png"
+                       target="res/drawable/close.png"/>
+        <resource-file src="src/android/res/drawable/close_button.xml"
+                       target="res/drawable/close_button.xml"/>  
 
         <framework src="com.android.support:support-v4:27.1.0" />
         <framework src="com.google.android.gms:play-services-vision:11.0.1" />
