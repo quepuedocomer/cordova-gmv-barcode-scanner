@@ -229,6 +229,8 @@ public class CameraSourcePreview extends ViewGroup {
         int torchLeft = (int) layoutWidth/2 + actualWidth/2 + (layoutWidth - (layoutWidth/2 + actualWidth/2))/2 - buttonSize/2;
         int torchTop = layoutHeight - (layoutWidth-torchLeft);
 
+        mTorchButton.layout(torchLeft, torchTop, torchLeft + buttonSize, torchTop + buttonSize);
+		
         mCloseButton.layout(buttonSize - 40, layoutHeight - buttonSize - 40, buttonSize - 40 + buttonSize, layoutHeight - 40 );
 
         try {
