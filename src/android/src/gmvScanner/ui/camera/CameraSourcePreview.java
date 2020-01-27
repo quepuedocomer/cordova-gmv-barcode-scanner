@@ -231,7 +231,7 @@ public class CameraSourcePreview extends ViewGroup {
 
         mTorchButton.layout(torchLeft, torchTop, torchLeft + buttonSize, torchTop + buttonSize);
 		
-        mCloseButton.layout(buttonSize - 40, torchTop, buttonSize - 40 + buttonSize, layoutHeight - 40 );
+        mCloseButton.layout(buttonSize - 40, torchTop, buttonSize - 40 + buttonSize, torchTop - 40 );
 
         try {
             startIfReady();
