@@ -118,8 +118,11 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         mPreview.ViewFinderHeight = ViewFinderHeight;
 		
         View.OnClickListener listener_aux = new View.OnClickListener() {
-            //setResult(CommonStatusCodes.SUCCESS, null);
-            finish();
+            @Override
+            public void onClick(View view) {
+                setResult(CommonStatusCodes.SUCCESS, null);
+				finish();
+            }
         };
         mPreview.mCloseButton.setOnClickListener(listener_aux);
         mGraphicOverlay = (GraphicOverlay<BarcodeGraphic>) findViewById(getResources().getIdentifier("graphicOverlay", "id", getPackageName()));
