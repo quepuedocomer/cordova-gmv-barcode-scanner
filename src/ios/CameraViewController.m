@@ -70,7 +70,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     // Prevent crash on old Apple devices
     self.controller = self;
     

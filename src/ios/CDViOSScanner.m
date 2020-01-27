@@ -57,8 +57,7 @@
             self.cameraViewController.scanAreaWidth = (CGFloat)[[command argumentAtIndex:1 withDefault:@.5] floatValue];
             self.cameraViewController.scanAreaHeight = (CGFloat)[[command argumentAtIndex:2 withDefault:@.7] floatValue];
             self.cameraViewController.barcodeFormats = barcodeFormats;
-            self.cameraViewController.modalPresentationStyle = UIModalPresentationFullScreen;
-
+            
             NSLog(@"Test %@, width: %f, height: %f, barcodeFormats: %@",[command.arguments objectAtIndex:2], self.cameraViewController.scanAreaWidth, self.cameraViewController.scanAreaHeight, self.cameraViewController.barcodeFormats);
             
             [self.viewController presentViewController:self.cameraViewController animated: NO completion:nil];
@@ -109,7 +108,7 @@
                                            initWithRootViewController:self.cameraViewController];
     //nav.orientationDelegate = self.cameraViewController;
     nav.navigationBarHidden = YES;
-    nav.modalPresentationStyle = UIModalPresentationFullScreen;
+    nav.modalPresentationStyle = self.cameraViewController.modalPresentationStyle;
     
     __weak CDViOSScanner* weakSelf = self;
     

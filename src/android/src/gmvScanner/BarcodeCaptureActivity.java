@@ -21,7 +21,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.pm.ActivityInfo;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -113,7 +112,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
 
         setContentView(getResources().getIdentifier("barcode_capture", "layout", getPackageName()));
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         mPreview = (CameraSourcePreview) findViewById(getResources().getIdentifier("preview", "id", getPackageName()));
         mPreview.ViewFinderWidth = ViewFinderWidth;
@@ -289,7 +287,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         if (mPreview != null) {
             mPreview.release();
         }
@@ -342,7 +339,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         };
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Permiso de c√°mara requerido")
+        builder.setTitle("Permiso de c·mara requerido")
                 .setMessage(getResources().getIdentifier("no_camera_permission", "string", getPackageName()))
                 .setPositiveButton(getResources().getIdentifier("ok", "string", getPackageName()), listener)
                 .show();
