@@ -343,7 +343,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         };
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Permiso de c·mara requerido")
+        builder.setTitle("Permiso de c√°mara requerido")
                 .setMessage(getResources().getIdentifier("no_camera_permission", "string", getPackageName()))
                 .setPositiveButton(getResources().getIdentifier("ok", "string", getPackageName()), listener)
                 .show();
